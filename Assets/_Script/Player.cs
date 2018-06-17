@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,4 +12,6 @@ public class Player : MonoBehaviour {
 	public void action (uint public_money, uint private_money, int job_type){
 		
 	}
+
+	
 }

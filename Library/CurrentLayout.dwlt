@@ -146,7 +146,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 1278
     height: 671
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -524,20 +524,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Script
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Script
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\MICHI\Documents\board_game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 142a0000
-    m_LastClickedID: 10772
-    m_ExpandedIDs: 00000000642900009229000000ca9a3bffffff7f
+    m_SelectedIDs: 482a0000
+    m_LastClickedID: 10824
+    m_ExpandedIDs: 00000000622900009029000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006429000092290000
+    m_ExpandedIDs: 000000006229000090290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -681,9 +681,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30350000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 280bfdfff20bfdffec14fdff1016fdff6e17fdfff423fdff7427fdffd03dfdffb653fdff54a6fdffd89ffeffee9ffefff49ffeffc8aafeffdcfbffff000000003e2c0000c82e00002c2f0000662f0000ee30000004330000
+    m_SelectedIDs: f6330000
+    m_LastClickedID: 13302
+    m_ExpandedIDs: 62d3fbff9cd9fbff20dbfbff3cecfbffaeeefbffb6effbffc4f0fbfff2fcfbff6052fcff4aacfcffeafbffff00000000162c0000aa300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -702,7 +702,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - 3_Matching
+  - 4_Play
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -733,14 +733,14 @@ MonoBehaviour:
     height: 650
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 6948.125176365606
-  m_2DMode: 1
+  lastFramingTime: 2332.357476719252
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 599.66187, y: 303.38358, z: -4.3413486}
+    m_Target: {x: -22.174795, y: -4.649414, z: 3.2526283}
     speed: 2
-    m_Value: {x: 599.66187, y: 303.38358, z: -4.3413486}
+    m_Value: {x: -22.174795, y: -4.649414, z: 3.2526283}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -760,27 +760,27 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.701352, y: 0.005760003, z: -0.0056913565, w: -0.7127904}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.7013414, y: 0.005759916, z: -0.0056912703, w: -0.71277964}
   m_Size:
-    m_Target: 812.3826
+    m_Target: 149.37889
     speed: 2
-    m_Value: 812.3826
+    m_Value: 149.37889
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: 0.06961983, y: -0.71845466, z: 0.16807716, w: 0.6713614}
+  m_LastSceneViewRotation: {x: -0.096747, y: 0.63535804, z: -0.08068131, w: -0.7618732}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

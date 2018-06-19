@@ -17,10 +17,12 @@ public class waiting_time : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
+
         int minute = (int)time/60;
         int second = (int)time%60;
 
         string minText, secText;
+
         if (minute < 10)
             minText = "0" + minute.ToString();
         else

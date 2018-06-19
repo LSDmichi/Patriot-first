@@ -190,15 +190,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
-        m_MethodName: set_name
+      - m_Target: {fileID: 383280069}
+        m_MethodName: SceneLoader
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Play_Scene
+          m_StringArgument: 2_Role_Profile
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0339cc85a62a77a4b853d05538732b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Next_scene: 
 --- !u!1 &522410627
 GameObject:
   m_ObjectHideFlags: 0

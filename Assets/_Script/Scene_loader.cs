@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Scene_Loader : MonoBehaviour {
     public string Next_scene;
     public void SceneLoader(string Next_scene) {
-        Debug.Log(Next_scene);
         SceneManager.LoadScene(Next_scene);
     }
 }

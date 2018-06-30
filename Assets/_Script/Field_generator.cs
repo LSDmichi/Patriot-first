@@ -7,10 +7,11 @@ public class Field_generator : MonoBehaviour {
 	public int tile_max_count; // 最大タイル数
 	private List<Object> tile_object_list; // タイル
 	private Vector3 gen_pos; // 生成場所
+	private Vector3 new_gen_pos;
 
 	// Use this for initialization
 	void Start () {
-		Vector3 gen_pos = new Vector3(0, 0, 0);
+		Vector3 gen_pos = new Vector3(-45, 1, 45);
 		int tile_max_count = 100; // after everthig has done, we create more unique maps
 		Weight_List name_list = new Weight_List();
 		List<Object> tile_object_list = name_list.InitList();
@@ -20,7 +21,7 @@ public class Field_generator : MonoBehaviour {
 
 		for(int i = 0; i <= tile_max_count; i++) {
 			Object tile = pick_tile_type(tile_object_list);
-			Vector3 new_gen_pos = generate_position(gen_pos, i);
+			new_gen_pos = generate_position(gen_pos, i);
 			Instantiate(tile, new_gen_pos, Quaternion.identity);
 		}
 
@@ -33,7 +34,16 @@ public class Field_generator : MonoBehaviour {
 	}
 
 	private Vector3 generate_position(Vector3 gen_pos, int i) {
-		return gen_pos;
+		if (i <= 10) {
+			float x = i * 10 + gen_pos.x;
+			new_gen_pos = new Vector3(x, gen_pos.y, gen_pos.z);
+		} else if (i > 10) {
+			float x = gen_pos.x + (i * 10);
+			float y = gen_pos.y + ((i / 10) * 10);
+			new_gen_pos = new Vector3(x, y, gen_pos.z);
+		}
+
+		return new_gen_pos;
 	}
 
 }

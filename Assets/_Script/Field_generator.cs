@@ -29,12 +29,10 @@ public class Field_generator : MonoBehaviour {
 
 	private Vector3 GeneratePosition(Vector3 gen_pos, int i) {
         
-            float x = (i % 10) * 10 + gen_pos.x;
-            float z = gen_pos.z - (i / 10) * 10;
-            new_gen_pos = new Vector3(x, gen_pos.y, z);
-
+        float x = (i % 10) * 10 + gen_pos.x;
+        float z = gen_pos.z - (i / 10) * 10;
+        new_gen_pos = new Vector3(x, gen_pos.y, z);
 
         return new_gen_pos;
 	}
-
 }

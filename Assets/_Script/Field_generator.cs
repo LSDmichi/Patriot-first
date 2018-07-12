@@ -17,8 +17,10 @@ public class Field_generator : MonoBehaviour {
 		for(int i = 0; i <= tile_max_count; i++) {
 			Object tile = pick_tile_type(tile_object_list);
 			new_gen_pos = GeneratePosition(gen_pos, i);
-			Instantiate(tile, new_gen_pos, Quaternion.identity);
-		}
+            GameObject obj = (GameObject)Instantiate(tile, new_gen_pos, Quaternion.identity);
+            GameObject parent_obj = GameObject.Find("field");
+            obj.transform.parent = parent_obj.transform;
+        }
 	}
 
 	private Object pick_tile_type(List<Object> tile_object_list){

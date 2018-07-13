@@ -24,14 +24,15 @@ public struct Item
     }
 
     public Item ItemDetail(int id){
-        Item item = new Item();
-        if (id == 0000001) { Item card = Food(); }
-        else if (id == 0000002) { Item card = Wood(); }
-        else if (id == 0000003) { Item card = Iron(); }
-        else if (id == 0000004) { Item card = Gold(); }
-        else if (id == 0000005) { Item card = Oil();  }
+        Item card = new Item();
+        if (id == 0000001) { card = Food(); }
+        else if (id == 0000002) { card = Wood(); }
+        else if (id == 0000003) { card = Iron(); }
+        else if (id == 0000004) { card = Gold(); }
+        else if (id == 0000005) { card = Oil(); }
+        else {card = Empty();}
 
-        if (card == null )
+        return card;
     }
 
     public List<Item> InitialUserItem(List<int> item_id)
@@ -39,12 +40,15 @@ public struct Item
         List<Item> ItemList = new List<Item>();
         foreach (int id in item_id)
         {
-            ItemList.Add(new ItemDetail(id));
+            Item item = new Item();
+            Item data = item.ItemDetail(id);
+            ItemList.Add(data);
         }
 
         return ItemList;
     }
 
+    // ここからカードデータ
     private Item Food(){
         string name = "食料";
         string disp = "消費カードです";
@@ -58,4 +62,73 @@ public struct Item
         return data;
     }
 
+    private Item Wood()
+    {
+        string name = "木";
+        string disp = "消費カードです";
+        int eff = 0;
+        uint val = 0;
+        int type = 0;
+        uint price = 500;
+        Texture img = Resources.Load("card/texture/wood") as Texture;
+
+        Item data = new Item(name, disp, eff, val, type, price, img);
+        return data;
+    }
+
+    private Item Iron()
+    {
+        string name = "鉄";
+        string disp = "消費カードです";
+        int eff = 0;
+        uint val = 0;
+        int type = 0;
+        uint price = 500;
+        Texture img = Resources.Load("card/texture/iron") as Texture;
+
+        Item data = new Item(name, disp, eff, val, type, price, img);
+        return data;
+    }
+
+    private Item Gold()
+    {
+        string name = "金";
+        string disp = "消費カードです";
+        int eff = 0;
+        uint val = 0;
+        int type = 0;
+        uint price = 500;
+        Texture img = Resources.Load("card/texture/gold") as Texture;
+
+        Item data = new Item(name, disp, eff, val, type, price, img);
+        return data;
+    }
+
+    private Item Oil()
+    {
+        string name = "原油";
+        string disp = "消費カードです";
+        int eff = 0;
+        uint val = 0;
+        int type = 0;
+        uint price = 500;
+        Texture img = Resources.Load("card/texture/oil") as Texture;
+
+        Item data = new Item(name, disp, eff, val, type, price, img);
+        return data;
+    }
+
+    private Item Empty()
+    {
+        string name = "空";
+        string disp = "存在しないアイテムです";
+        int eff = 0;
+        uint val = 0;
+        int type = 0;
+        uint price = 500;
+        Texture img = Resources.Load("card/texture/oil") as Texture;
+
+        Item data = new Item(name, disp, eff, val, type, price, img);
+        return data;
+    }
 }

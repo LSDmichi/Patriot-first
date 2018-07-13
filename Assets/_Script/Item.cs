@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.IO;
                  
 public struct Item
 {
@@ -35,7 +34,7 @@ public struct Item
         return card;
     }
 
-    public List<Item> InitialUserItem(List<int> item_id)
+    public List<Item> MultiUserItem(List<int> item_id)
     {
         List<Item> ItemList = new List<Item>();
         foreach (int id in item_id)

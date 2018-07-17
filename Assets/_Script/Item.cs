@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
                  
-public struct Item
+public class Item
 {
     string item_name; //アイテムの名前
     string item_description; //アイテムの詳細

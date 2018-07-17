@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public struct Job
+public class Job
 {
     string job_name;
     uint additional_public_money_from_job;

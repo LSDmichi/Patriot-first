@@ -11,14 +11,11 @@ public struct Player
     string user_profile_name;
     List<Item> user_item;
 
-    public Player()
-    {
-
-    }
 
     public Player PlayerSpec(string name, int job, int profile, List<Item> items)
     {
         user_name = name;
+
         uint base_public_money = 100000;
         uint base_private_money = 50000;
 

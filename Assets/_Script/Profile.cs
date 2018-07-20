@@ -10,8 +10,8 @@ public struct Profile
     string profile_effect_discription;
     int profile_type;
     public uint additional_public_money_from_profile;
-    public uint additional_private_money_from_profile;;
-    List<Item> additional_item_list_from_profile;
+    public uint additional_private_money_from_profile;
+    public List<Item> additional_item_list_from_profile;
 
     public Profile (string name, string disp, string eff, string eff_disp, int type, uint add_pub_mny, uint add_pri_mny, List<Item> add_item_list) {
         profile_name = name;

@@ -46,6 +46,17 @@ public class Item
 
         return ItemList;
     }
+    
+    public IEnumerable<Item> AddRange(List<Item> item1, List<Item> item2)
+    {
+        foreach (Item i in item1)
+            yield return i;
+        foreach (Item i in item2)
+            yield return i;
+    }
+ 
+
+
 
     // ここからカードデータ
     private Item Food(){

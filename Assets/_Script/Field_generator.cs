@@ -5,8 +5,6 @@ using UnityEngine;
 public class Field_generator : MonoBehaviour {
 
 	public int tile_max_count; // 最大タイル数
-	private List<Object> tile_object_list; // タイル
-	private Vector3 gen_pos; // 生成場所
 	private Vector3 new_gen_pos;
 
 	public void generate_field(){

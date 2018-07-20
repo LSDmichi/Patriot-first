@@ -8,14 +8,16 @@ public class Job
     public string job_name;
     public uint additional_public_money_from_job;
     public uint additional_private_money_from_job;
-    public List<Item> addtional_item_from_job;
+    public List<Item> addtional_item_list_from_job;
 
-    public Job(string name, uint base_public_money, uint base_private_money, List<Item> addtional_item)
+    public Job JobSpec(string name, uint base_public_money, uint base_private_money, List<Item> addtional_item)
     {
-        job_name = name;
-        additional_public_money_from_job = base_public_money;
-        additional_private_money_from_job = base_private_money;
-        addtional_item_from_job = addtional_item;
+        Job user_job = new Job();
+        user_job.job_name = name;
+        user_job.additional_public_money_from_job = base_public_money;
+        user_job.additional_private_money_from_job = base_private_money;
+        user_job.addtional_item_list_from_job = addtional_item;
+        return user_job;
     }
 
     public Job JobDetail(int id)
@@ -36,7 +38,8 @@ public class Job
         uint base_public_money = 50000;
         uint base_private_money = 200000;
         List<Item> item = new List<Item> { };
-        Job job = new Job(name, base_public_money, base_private_money, item);
+        Job job = new Job();
+        job = job.JobSpec(name, base_public_money, base_private_money, item);
         return job;
     }
 
@@ -46,7 +49,8 @@ public class Job
         uint base_public_money = 200000;
         uint base_private_money = 50000;
         List<Item> item = new List<Item> { };
-        Job job = new Job(name, base_public_money, base_private_money, item);
+        Job job = new Job();
+        job = job.JobSpec(name, base_public_money, base_private_money, item);
         return job;
     }
 
@@ -56,7 +60,8 @@ public class Job
         uint base_public_money = 250000;
         uint base_private_money = 0;
         List<Item> item = new List<Item> { };
-        Job job = new Job(name, base_public_money, base_private_money, item);
+        Job job = new Job();
+        job = job.JobSpec(name, base_public_money, base_private_money, item);
         return job;
     }
 
@@ -66,7 +71,8 @@ public class Job
         uint base_public_money = 200000;
         uint base_private_money = 50000;
         List<Item> item = new List<Item> { };
-        Job job = new Job(name, base_public_money, base_private_money, item);
+        Job job = new Job();
+        job = job.JobSpec(name, base_public_money, base_private_money, item);
         return job;
     }
 
@@ -76,7 +82,8 @@ public class Job
         uint base_public_money = 0;
         uint base_private_money = 0;
         List<Item> item = new List<Item> { };
-        Job job = new Job(name, base_public_money, base_private_money, item);
+        Job job = new Job();
+        job = job.JobSpec(name, base_public_money, base_private_money, item);
         return job;
     }
 }

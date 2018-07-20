@@ -13,15 +13,18 @@ public struct Profile
     public uint additional_private_money_from_profile;
     public List<Item> additional_item_list_from_profile;
 
-    public Profile (string name, string disp, string eff, string eff_disp, int type, uint add_pub_mny, uint add_pri_mny, List<Item> add_item_list) {
-        profile_name = name;
-        profile_disp = disp;
-        profile_effect = eff;
-        profile_effect_discription = eff_disp;
-        profile_type = type;
-        additional_public_money_from_profile = add_pub_mny;
-        additional_private_money_from_profile = add_pri_mny;
-        additional_item_list_from_profile = add_item_list;
+    public Profile ProfileSpec (string name, string disp, string eff, string eff_disp, int type, uint add_pub_mny, uint add_pri_mny, List<Item> add_item_list) {
+        Profile user_profile = new Profile();
+        user_profile.profile_name = name;
+        user_profile.profile_disp = disp;
+        user_profile.profile_effect = eff;
+        user_profile.profile_effect_discription = eff_disp;
+        user_profile.profile_type = type;
+        user_profile.additional_public_money_from_profile = add_pub_mny;
+        user_profile.additional_private_money_from_profile = add_pri_mny;
+        user_profile.additional_item_list_from_profile = add_item_list;
+
+        return user_profile;
     }
 
     public Profile ProfileDetail(int id)
@@ -53,7 +56,8 @@ public struct Profile
         List<int> item_id = new List<int> { 1, 4, 5 };
         List<Item> add_item_list = item.MultiUserItem(item_id);
 
-        Profile data = new Profile(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
+        Profile data = new Profile();
+        data = data.ProfileSpec(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
         return data;
     }
 
@@ -70,7 +74,8 @@ public struct Profile
         List<int> item_id = new List<int> { 1, 4, 5 };
         List<Item> add_item_list = item.MultiUserItem(item_id);
 
-        Profile data = new Profile(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
+        Profile data = new Profile();
+        data = data.ProfileSpec(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
         return data;
     }
 
@@ -87,7 +92,8 @@ public struct Profile
         List<int> item_id = new List<int> { 1, 4, 5 };
         List<Item> add_item_list = item.MultiUserItem(item_id);
 
-        Profile data = new Profile(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
+        Profile data = new Profile();
+        data = data.ProfileSpec(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
         return data;
     }
 
@@ -104,7 +110,8 @@ public struct Profile
         List<int> item_id = new List<int> { 1, 4, 5 };
         List<Item> add_item_list = item.MultiUserItem(item_id);
 
-        Profile data = new Profile(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
+        Profile data = new Profile();
+        data = data.ProfileSpec(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
         return data;
     }
 
@@ -121,7 +128,8 @@ public struct Profile
         List<int> item_id = new List<int> {};
         List<Item> add_item_list = item.MultiUserItem(item_id);
 
-        Profile data = new Profile(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
+        Profile data = new Profile();
+        data = data.ProfileSpec(name, disp, eff, eff_disp, type, add_pub_mny, add_pri_mny, add_item_list);
         return data;
     }
 }

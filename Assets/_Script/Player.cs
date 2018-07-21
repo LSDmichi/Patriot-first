@@ -30,9 +30,10 @@ public struct Player
 
         user_profile_name = user_profile.profile_name;
 
-        //Ç±Ç±ñ‚ëËç°ï∑Ç¢ÇƒÇ¢ÇÈ
+        //has some problems under this line 
         List<Item> item_list = new List<Item>() { };
-        user_item = item_list.AddRange(user_profile.additional_item_list_from_profile, );
+        item_list.AddRange(user_profile.additional_item_list_from_profile);
+        item_list.AddRange(user_job.addtional_item_list_from_job);
 
         Player player = new Player();
         player.user_name = name;
@@ -40,7 +41,7 @@ public struct Player
         player.user_private_money = user_private_money;
         player.user_job_name = user_job.job_name;
         player.user_profile_name = user_profile.profile_name;
-        player.user_item = user_item
+        player.user_item = user_item;
         
         return player;
     }

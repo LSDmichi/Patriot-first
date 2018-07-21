@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
                  
-public struct Item
+public class Item
 {
     string item_name; //アイテムの名前
     string item_description; //アイテムの詳細
@@ -12,7 +12,8 @@ public struct Item
     uint item_price; // 販売時の価格
     Texture item_image; //アイテムの画像
 
-    public Item(string name, string disp, int eff, uint val, int type, uint price, Texture img){
+    public Item ItemSpec(string name, string disp, int eff, uint val, int type, uint price, Texture img){
+        
         this.item_name = name;
         this.item_description = disp;
         this.item_effect = eff;
@@ -20,6 +21,8 @@ public struct Item
         this.item_type = type;
         this.item_price = price;
         this.item_image = img;
+
+        return this;
     }
 
     public Item ItemDetail(int id){
@@ -46,15 +49,8 @@ public struct Item
 
         return ItemList;
     }
-    
-    public IEnumerable<Item> AddRange(List<Item> item1, List<Item> item2)
-    {
-        foreach (Item i in item1)
-            yield return i;
-        foreach (Item i in item2)
-            yield return i;
-    }
- 
+
+
 
 
 
@@ -68,7 +64,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/food") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 
@@ -82,7 +79,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/wood") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 
@@ -96,7 +94,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/iron") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 
@@ -110,7 +109,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/gold") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 
@@ -124,7 +124,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/oil") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 
@@ -138,7 +139,8 @@ public struct Item
         uint price = 500;
         Texture img = Resources.Load("card/texture/oil") as Texture;
 
-        Item data = new Item(name, disp, eff, val, type, price, img);
+        Item data = new Item();
+        data = data.ItemSpec(name, disp, eff, val, type, price, img);
         return data;
     }
 }
